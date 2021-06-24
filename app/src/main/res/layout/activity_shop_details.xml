@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShopDetails"
+    android:layout_centerVertical="true"
+
+    >
+
+    <include android:id="@+id/ShopDetailToolbar" layout="@layout/toolbar">
+    </include>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ShopDetailToolbar"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        android:id="@+id/cardShopDetail"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtNameShopDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:hint="Name"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtDateShopDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtNameShopDetail"
+                android:hint="Date"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtLocationShopDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtDateShopDetail"
+                android:hint="Location"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                />
+
+            <TextView
+                android:id="@+id/txtPlaceShopDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtLocationShopDetail"
+                android:hint="Place"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBoxDetail"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtPlaceShopDetail"
+                android:text="Status"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/edtNoteShopDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/checkBoxDetail"
+                android:hint="Note"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:lines="2"
+                android:cursorVisible="false"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Bill"
+                android:layout_below="@+id/edtNoteShopDetail"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:id="@+id/textHello"/>
+
+            <ImageView
+                android:id="@+id/billPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/textHello"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@mipmap/bill_foreground" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Map Services"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/mapBtn"
+        android:layout_below="@+id/cardShopDetail"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/saveBtn"
+        android:layout_below="@+id/mapBtn"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Remainder"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/remBtn"
+        android:layout_below="@+id/saveBtn"/>
+
+</RelativeLayout>
